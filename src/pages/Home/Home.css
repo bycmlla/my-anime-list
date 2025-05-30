@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.home-container {
+}
+
+.title-list {
+  text-decoration: none;
+}
+.title-list p {
+  margin: 0;
+  cursor: pointer; 
+  color: black;
+}
+
+.title-list-view h2 {
+  display: flex;
+  margin-top: 10px;
+  padding: 0;
+  justify-content: center;
+  font-size: 40px;
+  color: #424242;
+  align-items: center;
+  font-family: "Annapurna SIL", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.line-2 {
+  display: block;
+  border-bottom: 2px solid #ccc;
+  width: 20%;
+  margin: 10px auto;
+}
+
+.category-controls {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-family: "Annapurna SIL", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.custom-dropdown .dropdown-toggle::after {
+  margin-left: 10px;
+}
+.custom-toggle {
+  background-color: #4682b4 !important;
+  border-radius: 30px !important;
+  border: none !important;
+  color: white !important;
+  padding: 8px 50px;
+}
+.custom-toggle.active {
+  background-color: #4682b4 !important;
+  color: white !important;
+}
+.custom-toggle.inactive {
+  background-color: #a3a3a3 !important;
+  color: white !important;
+}
+.custom-menu {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.custom-menu .dropdown-item {
+  color: black;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+}
+.custom-menu .dropdown-item:last-child {
+  border-bottom: none;
+}
+.custom-menu .dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+.category-button {
+  border: none;
+  border-radius: 30px;
+  margin-left: 10px;
+  padding: 8px 20px;
+  font-weight: bold;
+}
+.category-button.active {
+  background-color: #4682b4;
+  color: white;
+}
+.category-button.inactive {
+  background-color: #a3a3a3;
+  color: white;
+}
+
+.list-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex;
+  margin: 30px 30px 0 30px;
+}
+.image-list-cover {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.image-list-cover img {
+  width: 130px;
+  border-radius: 10px;
+}
+.info-content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 20px;
+}
+.info-items {
+  font-family: "Annapurna SIL", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  max-width: 100%;
+}
+.year-list {
+  max-width: 60px;
+  margin: 0;
+}
+.description-list {
+  width: 100%;
+  max-width: 70%;
+  margin: 15px 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+.rating-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.rating-item {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.rating-stars-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+}
+.react-stars-wrapper svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffd700 !important;
+  visibility: visible !important;
+}
+
+.line {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.admin-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.admin-button a button {
+  background-color: #fff8f6;
+  border: 2px solid #f5deb3;
+  color: black;
+  font-size: 10px;
+  margin: 20px;
+}
+.admin-button a button:hover {
+  background-color: #f5deb3;
+  border: 2px solid #f5deb3;
+}

@@ -1,0 +1,9 @@
+.rating-stars-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.star {
+  transition: color 0.3s;
+}

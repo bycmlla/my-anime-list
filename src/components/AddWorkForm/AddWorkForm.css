@@ -1,0 +1,65 @@
+.add-work-form {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #f0f8ff;
+  border: 2px solid #4682b4;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.add-work-form h2 {
+  text-align: center;
+  color: #4682b4;
+}
+
+.add-work-form input,
+.add-work-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-work-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.file-label {
+  color: #4682b4;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-work-form button {
+  background-color: #4682b4;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-work-form button:hover {
+  background-color: #356a94;
+}
+.image-previews {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.preview-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

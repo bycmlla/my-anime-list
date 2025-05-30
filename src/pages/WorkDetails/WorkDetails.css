@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.work-details {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-hero {
+  height: 500px;
+  background-size: cover;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+}
+
+.work-description {
+  max-width: 80%;
+}
+
+.back-icon {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+}
+
+.work-container {
+  margin: -200px 0 100px 100px;
+}
+
+.work-content-header {
+  color: white;
+}
+
+.work-title {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 60px;
+}
+.work-content-body {
+  display: flex;
+  flex: row;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.work-cover {
+  flex-shrink: 0;
+}
+.work-cover img {
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.work-details-text {
+  flex: 1;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  font-size: 20px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+.work-content-header p {
+  font-size: 20px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+.all-images {
+  display: flex;
+  flex-direction: row;
+  gap: 20px 50px;
+  flex-wrap: wrap; 
+  margin-top: 20px;
+}
+
+.all-images img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.galery {
+  color: white;
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.Acess {
+  color: rgb(36, 36, 36);
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.box-acesso {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: #f9e4de;
+  border: 3px solid #fcdfa8;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgb(115, 93, 93);
+}
+
+.box-acesso img {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+}
