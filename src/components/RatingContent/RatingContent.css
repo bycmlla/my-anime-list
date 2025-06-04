@@ -7,3 +7,10 @@
 .star {
   transition: color 0.3s;
 }
+
+@media (max-width: 480px){
+    .rating-stars-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}

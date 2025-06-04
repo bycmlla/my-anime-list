@@ -42,9 +42,8 @@ const WorkDetails = () => {
       <div className="work-container">
         <div className="work-content-header">
           <h1 className="work-title">{obra.title}</h1>
-          <p>
-            {obra.year} | {obra.genre}
-          </p>
+          <p>{obra.year}</p>
+          <p>{obra.genre}</p>
           <RatingContent ratingText={`${obra.rating}/10`} />
         </div>
         <div className="work-content-body">

@@ -8,7 +8,7 @@
 }
 .title-list p {
   margin: 0;
-  cursor: pointer; 
+  cursor: pointer;
   color: black;
 }
 
@@ -24,11 +24,21 @@
   font-weight: 700;
   font-style: normal;
 }
+
 .line-2 {
   display: block;
   border-bottom: 2px solid #ccc;
   width: 20%;
   margin: 10px auto;
+}
+
+.mobile-filter-button {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  color: #4682b4;
 }
 
 .category-controls {
@@ -40,41 +50,55 @@
   font-weight: 700;
   font-style: normal;
 }
+
 .custom-dropdown .dropdown-toggle::after {
   margin-left: 10px;
 }
+
 .custom-toggle {
   background-color: #4682b4 !important;
-  border-radius: 30px !important;
+  border-radius: 20px !important;
   border: none !important;
   color: white !important;
   padding: 8px 50px;
 }
+
 .custom-toggle.active {
   background-color: #4682b4 !important;
   color: white !important;
 }
+
 .custom-toggle.inactive {
   background-color: #a3a3a3 !important;
   color: white !important;
 }
+
 .custom-menu {
   background-color: white;
   border-radius: 10px;
   padding: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .custom-menu .dropdown-item {
   color: black;
   padding: 10px 20px;
   border-bottom: 1px solid #eee;
 }
+
 .custom-menu .dropdown-item:last-child {
   border-bottom: none;
 }
+
 .custom-menu .dropdown-item:hover {
   background-color: #f0f0f0;
 }
+
+.filters-div {
+  display: flex;
+  flex-direction: row;
+}
+
 .category-button {
   border: none;
   border-radius: 30px;
@@ -82,10 +106,12 @@
   padding: 8px 20px;
   font-weight: bold;
 }
+
 .category-button.active {
   background-color: #4682b4;
   color: white;
 }
+
 .category-button.inactive {
   background-color: #a3a3a3;
   color: white;
@@ -98,20 +124,29 @@
   align-items: flex;
   margin: 30px 30px 0 30px;
 }
+
 .image-list-cover {
   margin-right: 10px;
   cursor: pointer;
 }
+
 .image-list-cover img {
   width: 130px;
   border-radius: 10px;
 }
+
+.info-rating {
+  display: flex;
+  flex-direction: row;
+}
+
 .info-content {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   gap: 20px;
 }
+
 .info-items {
   font-family: "Annapurna SIL", serif;
   font-weight: 400;
@@ -119,10 +154,12 @@
   font-size: 20px;
   max-width: 100%;
 }
+
 .year-list {
   max-width: 60px;
   margin: 0;
 }
+
 .description-list {
   width: 100%;
   max-width: 70%;
@@ -143,17 +180,20 @@
   margin-left: auto;
   margin-right: 20px;
 }
+
 .rating-item {
   font-size: 30px;
   font-weight: bold;
   margin: 0;
 }
+
 .rating-stars-wrapper {
   display: flex;
   align-items: center;
   gap: 5px;
   min-height: 24px;
 }
+
 .react-stars-wrapper svg {
   width: 24px;
   height: 24px;
@@ -172,6 +212,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .admin-button a button {
   background-color: #fff8f6;
   border: 2px solid #f5deb3;
@@ -179,7 +220,85 @@
   font-size: 10px;
   margin: 20px;
 }
+
 .admin-button a button:hover {
   background-color: #f5deb3;
   border: 2px solid #f5deb3;
+}
+
+@media (max-width: 480px) {
+  .mobile-filter-button {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #4682b4;
+    font-size: 30px;
+  }
+
+  .list-content {
+    display: flex;
+    justify-content: start;
+  }
+
+  .category-controls {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    display: none;
+  }
+
+  .category-controls.show-mobile-filters {
+    display: flex;
+  }
+
+  .rating-content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .category-button {
+    padding: 0px 25px;
+    font-size: 10px;
+    margin: 5px 3px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .custom-toggle {
+    padding: 7px 20px;
+    font-size: 12px;
+    margin: 5px 5px;
+    width: 90%;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .image-list-cover img {
+    width: 100px;
+  }
+
+  .info-content {
+    gap: 10px;
+  }
+
+  .description-list {
+    display: none;
+  }
+
+  .rating-item {
+    display: none;
+  }
+
+  .info-rating {
+    display: flex;
+    flex-direction: column;
+  }
 }

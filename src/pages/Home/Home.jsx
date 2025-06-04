@@ -6,12 +6,14 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { Link } from "react-router-dom";
 import RatingContent from "../../components/RatingContent/RatingContent";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import { MdOutlineFilterList } from "react-icons/md";
 
 const Home = () => {
   const [selectedFilter, setSelectedFilter] = useState("Todos");
   const [obras, setObras] = useState([]);
   const [yearAsc, setYearAsc] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [showFiltersMobile, setShowFiltersMobile] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:4000/obras")
@@ -22,7 +24,7 @@ const Home = () => {
       })
       .catch((error) => console.error("Erro ao buscar Obras:", error));
   }, []);
-  
+
   const top5Ids = [38, 43, 32, 19, 14];
   const getFilteredObras = () => {
     let filtered = [...obras];
@@ -49,6 +51,8 @@ const Home = () => {
 
     return filtered;
   };
+  console.log(window.innerWidth); // Vai te mostrar algo como 430
+  console.log(window.devicePixelRatio); // Algo como 3
 
   const handleFilterClick = (filter) => {
     setSelectedFilter(filter);
@@ -76,40 +80,53 @@ const Home = () => {
         <h2>List View</h2>
         <span className="line-2" />
       </div>
+      <button
+        className="mobile-filter-button"
+        onClick={() => setShowFiltersMobile((prev) => !prev)}
+      >
+        <MdOutlineFilterList size={30} />
+      </button>
 
-      <div className="category-controls">
-        <Dropdown className="custom-dropdown">
-          <Dropdown.Toggle
-            variant="custom"
-            className={`custom-toggle ${
-              selectedFilter === "Categoria" ? "active" : "inactive"
-            }`}
-          >
-            Categoria
-          </Dropdown.Toggle>
-          <Dropdown.Menu className="custom-menu">
-            {["Anime", "Filme", "Série"].map((label) => (
-              <Dropdown.Item
-                key={label}
-                onClick={() => handleCategorySelect(label)}
-              >
-                {label}
-              </Dropdown.Item>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
-
-        {["Top 5", "Todos", "Ano", "Add Recente"].map((label) => (
-          <Button
-            key={label}
-            className={`category-button ${
-              selectedFilter === label ? "active" : "inactive"
-            }`}
-            onClick={() => handleFilterClick(label)}
-          >
-            {label}
-          </Button>
-        ))}
+      <div
+        className={`category-controls ${
+          showFiltersMobile ? "show-mobile-filters" : ""
+        }`}
+      >
+        <div className="category-div">
+          <Dropdown className="custom-dropdown">
+            <Dropdown.Toggle
+              variant="custom"
+              className={`custom-toggle ${
+                selectedFilter === "Categoria" ? "active" : "inactive"
+              }`}
+            >
+              Categoria
+            </Dropdown.Toggle>
+            <Dropdown.Menu className="custom-menu">
+              {["Anime", "Filme", "Série"].map((label) => (
+                <Dropdown.Item
+                  key={label}
+                  onClick={() => handleCategorySelect(label)}
+                >
+                  {label}
+                </Dropdown.Item>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+        <div className="filters-div">
+          {["Top 5", "Todos", "Ano", "Recentes"].map((label) => (
+            <Button
+              key={label}
+              className={`category-button ${
+                selectedFilter === label ? "active" : "inactive"
+              }`}
+              onClick={() => handleFilterClick(label)}
+            >
+              {label}
+            </Button>
+          ))}
+        </div>
       </div>
 
       {getFilteredObras().map((obra) => (
@@ -121,18 +138,20 @@ const Home = () => {
                 alt={obra.title}
               />
             </Link>
-            <div className="info-content">
-              <div className="info-items">
-                <Link to={`/obras/${obra.id}`} className="title-list">
-                  <p>{obra.title}</p>
-                </Link>
-                <p className="year-list">({obra.year})</p>
-                <p className="description-list">{obra.description}</p>
+            <div className="info-rating">
+              <div className="info-content">
+                <div className="info-items">
+                  <Link to={`/obras/${obra.id}`} className="title-list">
+                    <p>{obra.title}</p>
+                  </Link>
+                  <p className="year-list">({obra.year})</p>
+                  <p className="description-list">{obra.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="rating-content">
-              <p className="rating-item">{obra.rating}/10</p>
-              <RatingContent ratingText={`${obra.rating}/10`} />
+              <div className="rating-content">
+                <p className="rating-item">{obra.rating}/10</p>
+                <RatingContent ratingText={`${obra.rating}/10`} />
+              </div>
             </div>
           </div>
           <div className="line" />

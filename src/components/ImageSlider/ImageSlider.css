@@ -50,3 +50,22 @@
   z-index: 3;
   pointer-events: none;
 }
+
+@media (max-width: 480px) {
+  .start-image {
+    width: 100%;
+    height: 150px; 
+  }
+
+  .bg-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .info-icon {
+    font-size: 20px;
+    top: 8px;
+    right: 8px;
+  }
+}
