@@ -86,6 +86,7 @@ const Home = () => {
       >
         <MdOutlineFilterList size={30} />
       </button>
+      <h1>Deploy automático funcionando!</h1>
 
       <div
         className={`category-controls ${
