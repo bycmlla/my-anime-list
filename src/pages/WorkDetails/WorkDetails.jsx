@@ -48,7 +48,7 @@ const WorkDetails = () => {
         </div>
         <div className="work-content-body">
           <div className="work-cover">
-            <img src={`http://localhost:4000/uploads/${obra.cover}`} />
+            <img src={`http://localhost:4000/uploads/${obra.cover}`} alt="capa da obra"/>
           </div>
 
           <div className="work-details-text">

@@ -23,7 +23,7 @@ const AddWorkForm = () => {
     if (token !== "meu-token-seguro") {
       navigate("/login");
     }
-  }, []);
+  }, [navigate]);
 
   const [imagePreviews, setImagePreviews] = useState([]);
 

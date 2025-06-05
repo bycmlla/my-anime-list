@@ -62,11 +62,6 @@ const Home = () => {
     }
   };
 
-  const handleDropdownToggle = (isOpen) => {
-    if (isOpen) {
-      setSelectedFilter("Dropdown");
-    }
-  };
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setSelectedFilter("Categoria");
@@ -86,7 +81,6 @@ const Home = () => {
       >
         <MdOutlineFilterList size={30} />
       </button>
-      <h1>Deploy automático funcionando!</h1>
 
       <div
         className={`category-controls ${
