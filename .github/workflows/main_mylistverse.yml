@@ -28,13 +28,13 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          # npm run test --if-present ← descomente se tiver testes funcionando
+          # npm run test --if-present
 
       - name: Upload server artifact
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: server
+          path: server 
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,6 +48,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
+          path: ./server 
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -58,8 +59,7 @@ jobs:
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
-        id: deploy-to-webapp
         with:
           app-name: 'mylistverse'
           slot-name: 'Production'
-          package: ./node-app
+          package: ./server  
