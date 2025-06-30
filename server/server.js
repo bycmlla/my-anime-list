@@ -29,7 +29,7 @@ const upload = multer({ storage });
 const con = mysql.createConnection({
     host: "177.66.203.139",
     port: 3306,
-    user: psydb,
+    user: "psydb",
     password: "Teste12345!",
     database: "myanimelist",
 });
