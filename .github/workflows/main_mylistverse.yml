@@ -35,6 +35,8 @@ jobs:
         with:
           name: node-app
           path: server 
+      - name: List files being deployed
+        run: ls -R ./server
 
   deploy:
     runs-on: ubuntu-latest
