@@ -62,4 +62,4 @@ jobs:
         with:
           app-name: 'mylistverse'
           slot-name: 'Production'
-          package: ./server
+          package: ./node-app
