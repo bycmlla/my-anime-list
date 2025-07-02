@@ -13,8 +13,6 @@ app.use(cors());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 
-
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "uploads/");
@@ -26,19 +24,20 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
+
 const con = mysql.createConnection({
-    host: "177.66.203.139",
-    port: 3306,
-    user: "psydb",
-    password: "Teste12345!",
-    database: "myanimelist",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT || 3306,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
+
 con.connect((err) => {
     if (err) {
         console.log("Erro ao conectar ao Banco de Dados... ", err);
         return;
     }
-
     console.log("Conexão estabelecida!");
 });
 
@@ -132,14 +131,14 @@ app.post(
 );
 
 app.get("/obras", (req, res) => {
-  con.query("SELECT * FROM obras", (err, results) => {
-    if (err) {
-      console.error("Erro ao buscar obras:", err);
-      return res.status(500).send("Erro ao buscar obras no banco");
-    }
-    console.log("Obras retornadas:", results.length);
-    res.json(results);
-  });
+    con.query("SELECT * FROM obras", (err, results) => {
+        if (err) {
+            console.error("Erro ao buscar obras:", err);
+            return res.status(500).send("Erro ao buscar obras no banco");
+        }
+        console.log("Obras retornadas:", results.length);
+        res.json(results);
+    });
 });
 
 
