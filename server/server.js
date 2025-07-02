@@ -44,10 +44,8 @@ con.connect((err) => {
 
 ///rotas
 
-
-
-app.get("/", (req, res) => {
-    res.send("Hello")
+app.get("/oi", (req, res) => {
+    res.send("Olá ariana")
 });
 
 app.post("/api/login", (req, res) => {
@@ -134,14 +132,17 @@ app.post(
 );
 
 app.get("/obras", (req, res) => {
-    con.query("SELECT * FROM obras", (err, results) => {
-        if (err) {
-            console.log("Erro ao buscar obras:", err);
-            return res.status(500).send("Erro ao buscar");
-        }
-        res.json(results);
-    });
+  con.query("SELECT * FROM obras", (err, results) => {
+    if (err) {
+      console.error("Erro ao buscar obras:", err);
+      return res.status(500).send("Erro ao buscar obras no banco");
+    }
+    console.log("Obras retornadas:", results.length);
+    res.json(results);
+  });
 });
+
+
 app.get("/obras/:id", (req, res) => {
     const { id } = req.params;
 
