@@ -41,6 +41,7 @@ const Login = () => {
         type="password"
         placeholder="Digite a senha"
         value={senha}
+        style={{borderRadius: 20, paddingLeft: 10}}
         onChange={(e) => setSenha(e.target.value)}
       />
       <button
@@ -48,7 +49,7 @@ const Login = () => {
         style={{
           backgroundColor: "#F5DEB3",
           border: "none",
-          borderRadius: 10,
+          borderRadius: 30,
           marginTop: 10,
           fontSize: 15,
           paddingLeft: 20,

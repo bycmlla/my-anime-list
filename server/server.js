@@ -48,8 +48,9 @@ app.get("/oi", (req, res) => {
 
 app.post("/api/login", (req, res) => {
     const { senha } = req.body;
+    console.log("Senha recebida:", senha, "Tipo:", typeof senha);
 
-    if (senha === 14303355640) {
+    if (senha === "14303355640") {
         return res.json({ token: "meu-token-seguro" });
     }
 
