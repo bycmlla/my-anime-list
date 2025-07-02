@@ -49,7 +49,7 @@ app.get("/oi", (req, res) => {
 app.post("/api/login", (req, res) => {
     const { senha } = req.body;
 
-    if (senha === process.env.ADMIN_PASSWORD) {
+    if (senha === 14303355640) {
         return res.json({ token: "meu-token-seguro" });
     }
 
