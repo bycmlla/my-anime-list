@@ -16,7 +16,7 @@ const Home = () => {
   const [showFiltersMobile, setShowFiltersMobile] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:4000/obras")
+    fetch("https://my-anime-list-aqpj.onrender.com/obras")
       .then((res) => res.json())
       .then((data) => {
         console.log("Obras:", data);
@@ -129,7 +129,7 @@ const Home = () => {
           <div className="list-content">
             <Link to={`/obras/${obra.id}`} className="image-list-cover">
               <img
-                src={`http://localhost:4000/uploads/${obra.cover}`}
+                src={`https://my-anime-list-aqpj.onrender.com/uploads/${obra.cover}`}
                 alt={obra.title}
               />
             </Link>

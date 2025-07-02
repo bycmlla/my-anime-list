@@ -47,7 +47,7 @@ const AddWorkForm = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:4000/obras", {
+      const response = await fetch("https://my-anime-list-aqpj.onrender.com/obras", {
         method: "POST",
         body: formData,
       });
