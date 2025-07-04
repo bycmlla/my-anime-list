@@ -51,8 +51,8 @@ const Home = () => {
 
     return filtered;
   };
-  console.log(window.innerWidth); // Vai te mostrar algo como 430
-  console.log(window.devicePixelRatio); // Algo como 3
+  console.log(window.innerWidth); 
+  console.log(window.devicePixelRatio); 
 
   const handleFilterClick = (filter) => {
     setSelectedFilter(filter);
