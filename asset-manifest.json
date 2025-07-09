@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/my-anime-list/static/css/main.a69c2442.css",
+    "main.js": "/my-anime-list/static/js/main.c034dda3.js",
+    "static/js/453.22070197.chunk.js": "/my-anime-list/static/js/453.22070197.chunk.js",
+    "static/media/start15.png": "/my-anime-list/static/media/start15.8238bb15c38b00bfcd6a.png",
+    "static/media/start5.png": "/my-anime-list/static/media/start5.9e53d0925b56bdf7cc03.png",
+    "static/media/start20.png": "/my-anime-list/static/media/start20.1365303f32e4495e0721.png",
+    "static/media/start18.png": "/my-anime-list/static/media/start18.246aed0de14cbb5826f2.png",
+    "static/media/start.png": "/my-anime-list/static/media/start.f1d5aba81279ba633d35.png",
+    "static/media/start11.png": "/my-anime-list/static/media/start11.bc3245eabfebf3d30362.png",
+    "static/media/start8.png": "/my-anime-list/static/media/start8.a24ab3cb119d0589be6c.png",
+    "static/media/start3.jpeg": "/my-anime-list/static/media/start3.ba33c0746003c4fe99a7.jpeg",
+    "static/media/start17.png": "/my-anime-list/static/media/start17.83780da138ed9b92032a.png",
+    "static/media/start9.jpeg": "/my-anime-list/static/media/start9.5af076abbf67d0733072.jpeg",
+    "static/media/start1.jpg": "/my-anime-list/static/media/start1.7ed7b918d393f804913b.jpg",
+    "static/media/start13.jpg": "/my-anime-list/static/media/start13.8f731b6b59b55e464074.jpg",
+    "static/media/start7.png": "/my-anime-list/static/media/start7.94391605f1d76b49d0db.png",
+    "static/media/start6.jpg": "/my-anime-list/static/media/start6.924a55799567142e5d1f.jpg",
+    "static/media/frierenbg.png": "/my-anime-list/static/media/frierenbg.2658cdc11c67eb5516f4.png",
+    "static/media/start16.jpg": "/my-anime-list/static/media/start16.730f054dd2af892aaffe.jpg",
+    "static/media/start12.jpg": "/my-anime-list/static/media/start12.8dffa850e3afc639e476.jpg",
+    "static/media/start10.jpg": "/my-anime-list/static/media/start10.5ee84b7507a18c29d158.jpg",
+    "index.html": "/my-anime-list/index.html",
+    "main.a69c2442.css.map": "/my-anime-list/static/css/main.a69c2442.css.map",
+    "main.c034dda3.js.map": "/my-anime-list/static/js/main.c034dda3.js.map",
+    "453.22070197.chunk.js.map": "/my-anime-list/static/js/453.22070197.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a69c2442.css",
+    "static/js/main.c034dda3.js"
+  ]
+}
