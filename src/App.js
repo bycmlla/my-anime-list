@@ -6,7 +6,7 @@ import AppRoutes from "./config/router";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/my-anime-list">
         <AppRoutes />
       </BrowserRouter>
     </div>
