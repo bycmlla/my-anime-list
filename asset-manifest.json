@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-anime-list/static/css/main.a69c2442.css",
-    "main.js": "/my-anime-list/static/js/main.f921c55b.js",
+    "main.css": "/my-anime-list/static/css/main.8ec961a3.css",
+    "main.js": "/my-anime-list/static/js/main.42ba1f6c.js",
     "static/js/453.22070197.chunk.js": "/my-anime-list/static/js/453.22070197.chunk.js",
     "static/media/start15.png": "/my-anime-list/static/media/start15.8238bb15c38b00bfcd6a.png",
     "static/media/start5.png": "/my-anime-list/static/media/start5.9e53d0925b56bdf7cc03.png",
@@ -22,12 +22,12 @@
     "static/media/start12.jpg": "/my-anime-list/static/media/start12.8dffa850e3afc639e476.jpg",
     "static/media/start10.jpg": "/my-anime-list/static/media/start10.5ee84b7507a18c29d158.jpg",
     "index.html": "/my-anime-list/index.html",
-    "main.a69c2442.css.map": "/my-anime-list/static/css/main.a69c2442.css.map",
-    "main.f921c55b.js.map": "/my-anime-list/static/js/main.f921c55b.js.map",
+    "main.8ec961a3.css.map": "/my-anime-list/static/css/main.8ec961a3.css.map",
+    "main.42ba1f6c.js.map": "/my-anime-list/static/js/main.42ba1f6c.js.map",
     "453.22070197.chunk.js.map": "/my-anime-list/static/js/453.22070197.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a69c2442.css",
-    "static/js/main.f921c55b.js"
+    "static/css/main.8ec961a3.css",
+    "static/js/main.42ba1f6c.js"
   ]
 }
