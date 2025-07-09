@@ -28,7 +28,10 @@
   resize: vertical;
   height: 100px;
 }
-
+.pag_inicial_btn{
+  background-color: #356a94;
+  color: white;
+}
 .file-label {
   color: #4682b4;
   font-weight: bold;
