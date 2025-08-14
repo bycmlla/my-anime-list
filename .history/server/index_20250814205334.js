@@ -23,8 +23,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
-
+// const upload = multer({ storage });
 // DB_HOST=177.66.203.139
 // DB_PORT=3306
 // DB_USER=psydb

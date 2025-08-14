@@ -22,14 +22,12 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
-
 const upload = multer({ storage });
-
-// DB_HOST=177.66.203.139
-// DB_PORT=3306
-// DB_USER=psydb
-// DB_PASSWORD=N3tbl4nk@pps
-// DB_DATABASE=myanimelist
+DB_HOST=177.66.203.139
+DB_PORT=3306
+DB_USER=psydb
+DB_PASSWORD=N3tbl4nk@pps
+DB_DATABASE=myanimelist
 
 const con = mysql.createConnection({
   host: "177.66.203.139",
