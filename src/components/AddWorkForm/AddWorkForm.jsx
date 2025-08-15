@@ -25,6 +25,10 @@ const AddWorkForm = () => {
     }
   }, [navigate]);
 
+  const navegar = () => {
+    navigate("/");
+  }
+
   const [imagePreviews, setImagePreviews] = useState([]);
 
   const handleAddWork = async () => {
@@ -47,7 +51,7 @@ const AddWorkForm = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:4000/obras", {
+      const response = await fetch("https://my-anime-list-aqpj.onrender.com/obras", {
         method: "POST",
         body: formData,
       });
@@ -106,6 +110,7 @@ const AddWorkForm = () => {
   return (
     <form className="add-work-form" onSubmit={handleSubmit}>
       <h2>Adicionar Obra</h2>
+      <button onClick={navegar} className="pag_inicial_btn">Página Inicial</button>
       <input
         name="title"
         placeholder="Nome da obra"

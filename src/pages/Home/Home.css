@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 .home-container {
+    background-color: #0c0a09;
 }
 
 .title-list {
@@ -9,7 +10,7 @@
 .title-list p {
   margin: 0;
   cursor: pointer;
-  color: black;
+  color: rgb(248, 248, 248);
 }
 
 .title-list-view h2 {
@@ -18,7 +19,7 @@
   padding: 0;
   justify-content: center;
   font-size: 40px;
-  color: #424242;
+  color: #f5f5f5;
   align-items: center;
   font-family: "Annapurna SIL", serif;
   font-weight: 700;
@@ -56,7 +57,7 @@
 }
 
 .custom-toggle {
-  background-color: #4682b4 !important;
+  background-color: #f23e02 !important;
   border-radius: 20px !important;
   border: none !important;
   color: white !important;
@@ -64,12 +65,12 @@
 }
 
 .custom-toggle.active {
-  background-color: #4682b4 !important;
+  background-color: #f23e02 !important;
   color: white !important;
 }
 
 .custom-toggle.inactive {
-  background-color: #a3a3a3 !important;
+  background-color: #6d6565 !important;
   color: white !important;
 }
 
@@ -108,14 +109,24 @@
 }
 
 .category-button.active {
-  background-color: #4682b4;
+  background-color: #f23e02;
   color: white;
 }
 
+
 .category-button.inactive {
-  background-color: #a3a3a3;
+  background-color: #6d6565;
   color: white;
 }
+
+.category-button:focus,
+.category-button:active {
+  background-color: #f23e02 !important;
+  color: white !important;
+  box-shadow: none;
+  outline: none;
+}
+
 
 .list-content {
   display: flex;
@@ -158,6 +169,7 @@
 .year-list {
   max-width: 60px;
   margin: 0;
+  color: white;
 }
 
 .description-list {
@@ -171,6 +183,7 @@
   text-overflow: ellipsis;
   font-size: 16px;
   line-height: 1.4em;
+  color: white;
 }
 
 .rating-content {
@@ -179,6 +192,7 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: 20px;
+  color: white;
 }
 
 .rating-item {

@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:4000/api/login", {
+      const res = await fetch("https://my-anime-list-aqpj.onrender.com/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ senha }),
@@ -41,6 +41,7 @@ const Login = () => {
         type="password"
         placeholder="Digite a senha"
         value={senha}
+        style={{borderRadius: 20, paddingLeft: 10}}
         onChange={(e) => setSenha(e.target.value)}
       />
       <button
@@ -48,7 +49,7 @@ const Login = () => {
         style={{
           backgroundColor: "#F5DEB3",
           border: "none",
-          borderRadius: 10,
+          borderRadius: 30,
           marginTop: 10,
           fontSize: 15,
           paddingLeft: 20,

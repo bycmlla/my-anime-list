@@ -9,7 +9,7 @@ const WorkDetails = () => {
   const { id } = useParams();
   const [obra, setObra] = useState(null);
   useEffect(() => {
-    fetch(`http://localhost:4000/obras/${id}`)
+    fetch(`https://my-anime-list-aqpj.onrender.com/obras/${id}`)
       .then((res) => res.json())
       .then((data) => setObra(data))
       .catch((err) => console.error("Erro ao buscar obra:", err));
@@ -30,7 +30,7 @@ const WorkDetails = () => {
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 40%, ${
             obra.dominant_color || "#000"
-          }), url(http://localhost:4000/uploads/${encodeURIComponent(
+          }), url(https://my-anime-list-aqpj.onrender.com/uploads/${encodeURIComponent(
             obra.imagens[0].url
           )})`,
         }}
@@ -48,7 +48,7 @@ const WorkDetails = () => {
         </div>
         <div className="work-content-body">
           <div className="work-cover">
-            <img src={`http://localhost:4000/uploads/${obra.cover}`} alt="capa da obra"/>
+            <img src={`https://my-anime-list-aqpj.onrender.com/uploads/${obra.cover}`} alt="capa da obra"/>
           </div>
 
           <div className="work-details-text">
@@ -62,7 +62,7 @@ const WorkDetails = () => {
           {obra.imagens.map((imagem, index) => (
             <img
               key={index}
-              src={`http://localhost:4000/uploads/${imagem.url}`}
+              src={`https://my-anime-list-aqpj.onrender.com/uploads/${imagem.url}`}
               alt={`Imagem ${index + 1}`}
             />
           ))}
