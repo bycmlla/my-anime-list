@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage }); // ⚠ lembre de descomentar
+const upload = multer({ storage });
 
 // DB_HOST=177.66.203.139
 // DB_PORT=3306
@@ -48,7 +48,7 @@ con.connect((err) => {
   console.log("Conexão estabelecida!");
 });
 
-/// rotas
+///rotas
 
 app.post("/api/login", (req, res) => {
   const { senha } = req.body;
@@ -156,7 +156,6 @@ app.get("/obras", (req, res) => {
     res.json(results);
   });
 });
-
 app.get("/obras/:id", (req, res) => {
   const { id } = req.params;
 
