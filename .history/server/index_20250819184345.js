@@ -151,7 +151,7 @@ app.get("/obras", (req, res) => {
   con.query("SELECT * FROM obras", (err, results) => {
     if (err) {
       console.log("Erro ao buscar obras:", err);
-      return res.status(500).json({ error: "Erro ao buscar obras" });
+      return res.status(500).send("Erro ao buscar");
     }
     res.json(results);
   });

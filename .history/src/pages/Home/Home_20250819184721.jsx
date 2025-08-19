@@ -16,21 +16,14 @@ const Home = () => {
   const [showFiltersMobile, setShowFiltersMobile] = useState(false);
 
   useEffect(() => {
-  fetch("https://my-anime-list-aqpj.onrender.com/obras")
-    .then(async (res) => {
-      if (!res.ok) {
-        const errText = await res.text();
-        throw new Error(`Erro HTTP ${res.status}: ${errText}`);
-      }
-      return res.json();
-    })
-    .then((data) => {
-      console.log("Obras:", data);
-      setObras(data);
-    })
-    .catch((error) => console.error("Erro ao buscar Obras:", error));
-}, []);
-
+    fetch("https://my-anime-list-aqpj.onrender.com/obras")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Obras:", data);
+        setObras(data);
+      })
+      .catch((error) => console.error("Erro ao buscar Obras:", error));
+  }, []);
 
   const top5Ids = [38, 43, 32, 19, 14];
   const getFilteredObras = () => {
